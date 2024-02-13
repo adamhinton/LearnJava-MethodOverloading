@@ -1,21 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("New score is " + calculateScore("Adam", 500));
+        System.out.println(convertToCentimeters(7, 1));
     }
 
-    public static int calculateScore(String playerName, int score){
-        return score * 1000;
+    public static double convertToCentimeters (int heightInches){
+        return heightInches * 2.54;
     }
 
-    public static int calculateScore(int score){
-        return calculateScore("Anonymous", score);
-    }
+    public static double convertToCentimeters (int heightFeet, int heightInchesRemaining) {
+        int feetToInches = heightFeet * 12;
+        int totalInches = feetToInches + heightInchesRemaining;
 
-    public static int calculateScore(){
-        System.out.println("No player name, no player score");
-        return 0;
+        return convertToCentimeters(totalInches);
     }
-
 
 }
