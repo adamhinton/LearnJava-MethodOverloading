@@ -3,6 +3,9 @@ public class Main {
     public static void main(String[] args) {
         int newScore = calculateScore("Adam", 500);
         System.out.println(newScore);
+
+        calculateScore(75);
+        calculateScore(100, 100);
     }
 
     public static int calculateScore(String playerName, int score){
