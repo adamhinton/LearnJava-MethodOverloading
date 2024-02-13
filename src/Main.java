@@ -10,5 +10,9 @@ public class Main {
         return score * 1000;
     }
 
+    public static int calculateScore(int score){
+        System.out.println(score);
+        return score * 1000;
+    }
 
 }
