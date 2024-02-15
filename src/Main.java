@@ -1,18 +1,31 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(convertToCentimeters(7, 1));
+        printDayOfWeek(0);
+        printDayOfWeek(1);
+        printDayOfWeek(2);
+        printDayOfWeek(3);
+        printDayOfWeek(4);
+        printDayOfWeek(5);
+        printDayOfWeek(6);
+        printDayOfWeek(6453);
     }
 
-    public static double convertToCentimeters (int heightInches){
-        return heightInches * 2.54;
-    }
+    public static void printDayOfWeek(int day){
 
-    public static double convertToCentimeters (int heightFeet, int heightInchesRemaining) {
-        int feetToInches = heightFeet * 12;
-        int totalInches = feetToInches + heightInchesRemaining;
 
-        return convertToCentimeters(totalInches);
+        var dayOfTheWeek = switch (day){
+            case 0 -> "Sunday";
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            default ->"Invalid Day";
+        };
+
+        System.out.println(day + " " + dayOfTheWeek);
     }
 
 }
