@@ -21,7 +21,7 @@ public class Main {
             case 3 -> "Wednesday";
             case 4 -> "Thursday";
             case 5 -> "Friday";
-            case 6 -> "Saturday";
+
             default ->"Invalid Day";
         };
 
